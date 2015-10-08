@@ -1,11 +1,8 @@
 {
   "name": "babel-plugin-project-relative-require",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Bable plugin for importing modules relative to the root",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+  "author": "gavriguy",
+  "license": "MIT"
 }
