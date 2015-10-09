@@ -11,10 +11,13 @@ module.exports = function (babel) {
 
       var ref = node.source.value;
 
+      console.log(ref,  (!ref || ref[0] !== '~' || ref[1] !== '/'), ref[0], ref[1]);
+
       // ensure a value, make sure it's not home relative e.g. ~/foo
-      if (!ref || ref[0] !== '~' || ref[1] === '/') {
+      if (!ref || ref[0] !== '~' || ref[1] !== '/') {
         return node;
       }
+      console.log('********', cwd + '/' + node.source.value.slice(1));
 
       node.source.value = cwd + '/' + node.source.value.slice(1);
 
