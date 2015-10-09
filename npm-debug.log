@@ -1,0 +1,94 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@2.11.2
+3 info using node@v0.12.0
+4 verbose node symlink /usr/local/bin/node
+5 verbose publish [ '.' ]
+6 silly cache add args [ '.', null ]
+7 verbose cache add spec .
+8 silly cache add parsed spec { raw: '.',
+8 silly cache add   scope: null,
+8 silly cache add   name: null,
+8 silly cache add   rawSpec: '.',
+8 silly cache add   spec: '/Users/gavriguy/repos/gavriguy/babel-plugin-project-relative-require',
+8 silly cache add   type: 'directory' }
+9 verbose addLocalDirectory /Users/gavriguy/.npm/babel-plugin-project-relative-require/2.0.0/package.tgz not in flight; packing
+10 verbose tar pack [ '/Users/gavriguy/.npm/babel-plugin-project-relative-require/2.0.0/package.tgz',
+10 verbose tar pack   '/Users/gavriguy/repos/gavriguy/babel-plugin-project-relative-require' ]
+11 verbose tarball /Users/gavriguy/.npm/babel-plugin-project-relative-require/2.0.0/package.tgz
+12 verbose folder /Users/gavriguy/repos/gavriguy/babel-plugin-project-relative-require
+13 info prepublish babel-plugin-project-relative-require@2.0.0
+14 verbose addLocalTarball adding from inside cache /Users/gavriguy/.npm/babel-plugin-project-relative-require/2.0.0/package.tgz
+15 silly cache afterAdd babel-plugin-project-relative-require@2.0.0
+16 verbose afterAdd /Users/gavriguy/.npm/babel-plugin-project-relative-require/2.0.0/package/package.json not in flight; writing
+17 verbose afterAdd /Users/gavriguy/.npm/babel-plugin-project-relative-require/2.0.0/package/package.json written
+18 silly publish { name: 'babel-plugin-project-relative-require',
+18 silly publish   version: '2.0.0',
+18 silly publish   repository:
+18 silly publish    { type: 'git',
+18 silly publish      url: 'git+https://github.com/gavriguy/babel-plugin-project-relative-require.git' },
+18 silly publish   description: 'A Bable plugin for importing modules relative to the current working directory (cwd)',
+18 silly publish   main: 'index.js',
+18 silly publish   author: { name: 'gavriguy' },
+18 silly publish   license: 'MIT',
+18 silly publish   keywords: [ 'babel', 'babel-plugin' ],
+18 silly publish   dependencies: { lodash: '^3.10.1' },
+18 silly publish   readme: '# babel-plugin-project-relative-require\n\nA Bable plugin for importing modules relative to the current working directory\n(cwd).\nIdea taken from FakeRainBrigand answer http://stackoverflow.com/a/31069137/1329668\n\n\n## Example\n\n**In**\n\n```javascript\nimport myModule from \'cmd://mymyModule\';\n```\n\n**Out**\n\n```javascript\nimport myModule from \'<relative_path_from_your_current_place>mymyModule\';\n```\n\n## Installation\n\n```sh\n$ npm install babel-plugin-project-relative-require\n```\n\n## Usage\n\n### Via `.babelrc` (Recommended)\n\n**.babelrc**\n\n```json\n{\n  "plugins": ["babel-plugin-project-relative-require"]\n}\n```\n\n## Via CLI\n\n```sh\n$ babel --plugins babel-plugin-project-relative-require script.js\n```\n\n### Via Node API\n\n```javascript\nrequire("babel-core").transform("code", {\n  plugins: ["babel-plugin-project-relative-require"]\n});\n```\n',
+18 silly publish   readmeFilename: 'README.md',
+18 silly publish   gitHead: '0374e3d7f70c656021dd1dca4b112e14c3ca73e9',
+18 silly publish   bugs: { url: 'https://github.com/gavriguy/babel-plugin-project-relative-require/issues' },
+18 silly publish   homepage: 'https://github.com/gavriguy/babel-plugin-project-relative-require#readme',
+18 silly publish   _id: 'babel-plugin-project-relative-require@2.0.0',
+18 silly publish   scripts: {},
+18 silly publish   _shasum: '3dc01c29eef23e582b94ec57df456c2d9085a90c',
+18 silly publish   _from: '.' }
+19 verbose getPublishConfig undefined
+20 silly mapToRegistry name babel-plugin-project-relative-require
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/babel-plugin-project-relative-require
+24 verbose publish registryBase https://registry.npmjs.org/
+25 silly publish uploading /Users/gavriguy/.npm/babel-plugin-project-relative-require/2.0.0/package.tgz
+26 verbose request uri https://registry.npmjs.org/babel-plugin-project-relative-require
+27 verbose request sending authorization for write operation
+28 info attempt registry request try #1 at 08:11:18
+29 verbose request using bearer token for auth
+30 verbose request id 32d7434dbc6e09ee
+31 http request PUT https://registry.npmjs.org/babel-plugin-project-relative-require
+32 http 403 https://registry.npmjs.org/babel-plugin-project-relative-require
+33 verbose headers { 'content-type': 'application/json',
+33 verbose headers   'cache-control': 'max-age=60',
+33 verbose headers   'content-length': '95',
+33 verbose headers   'accept-ranges': 'bytes',
+33 verbose headers   date: 'Fri, 09 Oct 2015 05:11:20 GMT',
+33 verbose headers   via: '1.1 varnish',
+33 verbose headers   connection: 'keep-alive',
+33 verbose headers   'x-served-by': 'cache-lhr6323-LHR',
+33 verbose headers   'x-cache': 'MISS',
+33 verbose headers   'x-cache-hits': '0',
+33 verbose headers   'x-timer': 'S1444367478.678804,VS0,VE1376' }
+34 verbose request invalidating /Users/gavriguy/.npm/registry.npmjs.org/babel-plugin-project-relative-require on PUT
+35 error publish Failed PUT 403
+36 verbose stack Error: "You cannot publish over the previously published version 2.0.0." : babel-plugin-project-relative-require
+36 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:247:14)
+36 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:170:14)
+36 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:354:22)
+36 verbose stack     at Request.emit (events.js:110:17)
+36 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1207:14)
+36 verbose stack     at Request.emit (events.js:129:20)
+36 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1153:12)
+36 verbose stack     at IncomingMessage.emit (events.js:129:20)
+36 verbose stack     at _stream_readable.js:908:16
+36 verbose stack     at process._tickCallback (node.js:355:11)
+37 verbose statusCode 403
+38 verbose pkgid babel-plugin-project-relative-require
+39 verbose cwd /Users/gavriguy/repos/gavriguy/babel-plugin-project-relative-require
+40 error Darwin 14.5.0
+41 error argv "node" "/usr/local/bin/npm" "publish"
+42 error node v0.12.0
+43 error npm  v2.11.2
+44 error code E403
+45 error "You cannot publish over the previously published version 2.0.0." : babel-plugin-project-relative-require
+46 error If you need help, you may report this error at:
+46 error     <https://github.com/npm/npm/issues>
+47 verbose exit [ 1, true ]
