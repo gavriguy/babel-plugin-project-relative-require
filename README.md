@@ -1,6 +1,7 @@
 # babel-plugin-project-relative-require
 
-A Bable plugin for importing modules relative to the root.
+A Bable plugin for importing modules relative to the current working directory
+(cwd).
 Idea taken from FakeRainBrigand answer http://stackoverflow.com/a/31069137/1329668
 
 
@@ -9,7 +10,7 @@ Idea taken from FakeRainBrigand answer http://stackoverflow.com/a/31069137/13296
 **In**
 
 ```javascript
-import myModule from '~/mymyModule';
+import myModule from 'cmd://mymyModule';
 ```
 
 **Out**

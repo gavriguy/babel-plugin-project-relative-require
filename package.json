@@ -1,8 +1,16 @@
 {
   "name": "babel-plugin-project-relative-require",
   "version": "1.1.0",
-  "description": "A Bable plugin for importing modules relative to the root",
+  "repository": "gavriguy/babel-plugin-project-relative-require",
+  "description": "A Bable plugin for importing modules relative to the current working directory (cwd)",
   "main": "index.js",
   "author": "gavriguy",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "babel",
+    "babel-plugin"
+  ],
+  "dependencies": {
+    "lodash": "^3.10.1"
+  }
 }
