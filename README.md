@@ -12,7 +12,7 @@ Idea taken from FakeRainBrigand answer http://stackoverflow.com/a/31069137/13296
 **In**
 
 ```javascript
-import myModule from 'cmd://mymyModule';
+import myModule from 'cwd://mymyModule';
 ```
 
 **Out**
