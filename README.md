@@ -1,3 +1,7 @@
+Note this is a Babel 5 plugin.
+
+I'm now personally use - https://github.com/jshanson7/babel-plugin-resolver plugin that supports babel 6
+
 # babel-plugin-project-relative-require
 
 [![npm version](https://badge.fury.io/js/babel-plugin-project-relative-require.svg)](https://badge.fury.io/js/babel-plugin-project-relative-require)
